@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FLUCK API</title>
+    <script>
+        fetch('config.json')
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = data.api_url;
+            })
+            .catch(() => {
+                window.location.href = 'https://fluck-bypass.trycloudflare.com';
+            });
+    </script>
+</head>
+<body>
+    <p>Redirecting to FLUCK API...</p>
+</body>
+</html>
